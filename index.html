@@ -1,25 +1,26 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html>
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Volunteerism</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="main.css" type="text/css">
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="main.css" type="text/css" />
     </head>
     <body>
-      <div class="target"></div>
-      <form>
-        <select id="selector" name="selector">
-          <option value="random">Random</option>
-          <option value="neighborPairing">Neighbor Pairing</option>
-          <option value="teamsOf3">Teams of 3</option>
-          <option value="randomPairing">Random Pairing</option>
-          <option value="randomNPairing">Random N Pairing</option>
-        </select>          
-        <button type="submit">Select</button>
+      <h1>Volunteerism</h1>
+      <form id="generate-group">
+        <select name="group-criteria">
+          <option value="random-student">Random Student</option>
+          <option value="neighbor-pairing">Neighbor Pairing</option>
+          <option value="teams-of-three">Teams of Three</option>
+          <option value="random-pairing">Random Pairing</option>
+          <option value="random-n-pairing">Random N Pairing</option>
+        </select>
+        <input type="number" min="2" max="11" class="hidden" />
+        <input type="submit" value="Pick" />
       </form>
-      <script src="main.js"></script>
+      <ul id="results">
+      </ul>
+      <script src="main2.js"></script>
     </body>
 </html>

@@ -1,3 +1,7 @@
 .target {
   background: #eee;
 }
+
+.hidden {
+  display: none;
+}
