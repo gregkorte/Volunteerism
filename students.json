@@ -1,3 +1,27 @@
 {
-	"students":["Seif", "Jackie", "Jessica", "Kimberly", "Brandon", "Blaise", "Evan", "Greg", "Charisse", "Luke", "Stephania", "David", "Steve", "Adam", "Spencer", "Leon", "Alex", "Gerald", "Sonda", "Beck", "Colby", "Kris"]
+	"students":
+  [
+    "Seif",
+    "Jackie",
+    "Jessica",
+    "Kimberly",
+    "Brandon",
+    "Blaise",
+    "Evan",
+    "Greg",
+    "Charisse",
+    "Luke",
+    "Stephania",
+    "David",
+    "Steve",
+    "Adam",
+    "Spencer",
+    "Leon",
+    "Alex",
+    "Gerald",
+    "Sonda",
+    "Beck",
+    "Colby",
+    "Kris"
+  ]
 }
