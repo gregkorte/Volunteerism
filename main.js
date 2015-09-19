@@ -8,11 +8,6 @@ function getJSON(url, cb){
   xhr.send();
 }
 
-// getJSON('https://volunteerism-gregkor.firebaseio.com/students.json');
-
-// From: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-// Returns a random integer between min (included) and max (excluded)
-// Using Math.round() will give you a non-uniform distribution!
 function getRandomInt(min, max){
   return Math.floor(Math.random() * (max - min)) + min;
 }
@@ -54,17 +49,16 @@ element.classList.add("hidden");
 document.addEventListener("DOMContentLoaded", function(){
   var $form = document.getElementById("generate-group");
   var students;
-  getJSON('https://volunteerism-gregkor.firebaseio.com/students.json', function(data){
+  getJSON('https://nsscohort07.firebaseio.com/Volunteerism/students.json', function(data){
     students = data;
   });
-  // var students = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22"]; ---This is now called into the JSON function
 
   var $select = $form.querySelector("select");
   var $numBox = $form.querySelector("input[type='number']");
   $select.addEventListener("change", function(event){
     if (event.currentTarget.value === "random-n-pairing") {
       show($numBox);
-    } 
+    }
     else {
       hide($numBox);
     }
@@ -81,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function(){
       var studentNumber = getRandomInt(0, students.length);
       var studentName = students[studentNumber];
       addItemToList($ul, studentName);
-    }  
+    }
       else if(groupCriteria === "neighbor-pairing") {
         neighborGroup(students, 2, $ul);
       }
@@ -102,5 +96,5 @@ document.addEventListener("DOMContentLoaded", function(){
           // else {alert("Please select a number of groups between 2 and 11.")
           // }
       }
-  });    
-});  
+  });
+});
